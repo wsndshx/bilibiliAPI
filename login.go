@@ -10,7 +10,7 @@ import (
 
 //LoginReply 储存扫码登录返回的json
 type LoginReply struct {
-	Code   int           `json:"code"`
+	Code   uint8         `json:"code"`
 	Status bool          `json:"status"`
 	Ts     time.Duration `json:"ts"`
 	Data   struct {
@@ -21,11 +21,11 @@ type LoginReply struct {
 
 //LoginInfo 登录状态
 type LoginInfo struct {
-	Code    int           `json:"code"`
+	Code    uint8         `json:"code"`
 	Status  bool          `json:"status"`
 	Ts      time.Duration `json:"ts"`
 	Message string        `json:"message"`
-	Data    interface{}   `json:"data"`
+	Data    int8          `json:"data"`
 	DaTa    struct {
 		URL string `json:"url"`
 	} `json:"data"`
